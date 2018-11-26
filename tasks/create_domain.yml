@@ -27,4 +27,3 @@
     state: touch
   become: true
   register: _samba_domain_created
-
