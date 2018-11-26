@@ -1,7 +1,7 @@
 ---
 #- name: provisions samba
-  hosts: all
-  become: true
+ - hosts: all
+   become: true
   #vars:
     # - enable_dhcp_services: false
   #  - samba_create_domain_controller: true
@@ -11,6 +11,6 @@
     # - role: ansible-isc-dhcp
       # when: enable_dhcp_services is defined and enable_dhcp_services
   #  - role: ansible-ntp
-  roles: 
-  - ansible-samba
+   roles: 
+   - ansible-samba
 #  tasks:
