@@ -1,3 +1,2 @@
 ---
 # vars file for ansible-samba
-samba_ad_info.kerberos_realm: progressoft.cloud
