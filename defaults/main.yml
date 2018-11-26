@@ -1,7 +1,7 @@
 ---
 # defaults file for ansible-samba
 pri_domain_name: progressoft.cloud
-samba_ad_info: []
+samba_ad_info: [progressoft.cloud]
 ad_dc_hostname: "{{ ansible_hostname }}"
 ad_dns_domain_name: "{{ pri_domain_name }}"
 adminpass: P@55w0rd
