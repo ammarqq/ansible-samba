@@ -20,11 +20,5 @@
 - name: create_domain | configuring Active Directory
   shell: "samba-tool domain provision --server-role=dc --realm=PROGRESSOFT.CLOUD --dns-backend=SAMBA_INTERNAL --domain=PROGRESSOFT --adminpass=PSCloud@123  --use-rfc2307"
   become: true
-  register: samba_ad_created
- 
-- name: create_domain | marking domain as created
-  file:
-    dest: /var/log/.samba_ad_created
-    state: touch
-  become: true
+
   
