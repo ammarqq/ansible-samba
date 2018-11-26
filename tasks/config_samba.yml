@@ -1,11 +1,12 @@
 ---
 - name: config_samba | configuring samba
+  becomre_user: root
   template:
     src: etc/samba/smb.j2
     dest: /etc/samba/smb.conf
-    owner: root
-    group: root
-    mode: 0644
+#    owner: root
+#    group: root
+#    mode: 0644
   notify:
     - restart nmbd
     - restart smbd
