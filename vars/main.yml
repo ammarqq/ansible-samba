@@ -8,5 +8,5 @@ adminpass: P@55w0rd
 allow_dns_updates: disabled
 backend_dns: internal
 dns_forwarder: 8.8.8.8
-kerberos_realm: '{{ pri_domain_name }}'
+kerberos_realm: progressoft.cloud
 netbios_domain_name: "{{ samba_netbios_domain_name[0]|upper }}"
