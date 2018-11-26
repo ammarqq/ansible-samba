@@ -19,7 +19,7 @@
   register: samba_ad_created_check
 
 - name: create_domain | configuring Active Directory
-  shell: "samba-tool domain provision --server-role=dc --realm=PROGRESSOFT.CLOUD --dns-backend=SAMBA_INTERNAL --domain=PROGRESSOFT --adminpass=Win$ton123 --server-role=domain controller --use-rfc2307"
+  shell: "samba-tool domain provision --server-role=dc --realm=PROGRESSOFT.CLOUD --dns-backend=SAMBA_INTERNAL --domain=PROGRESSOFT --adminpass='Win$ton123'  --use-rfc2307"
   become: true
 - name: create_domain | marking domain as created
   file:

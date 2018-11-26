@@ -11,6 +11,8 @@
     - libnss-winbind
     - libpam-winbind
     - winbind
+    - smbclient
+    
 # - name: debian | Installing Packages When Domain Controller
 #   apt:
 #     name: "{{ item }}"
