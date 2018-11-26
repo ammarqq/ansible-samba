@@ -42,7 +42,7 @@ Will spin up an Ubuntu server to function as an Active Directory domain controll
 ```yaml
 ---
 # defaults file for ansible-samba
-pri_domain_name: example.org
+pri_domain_name: progressoft.cloud
 samba_ad_info: []
   # ad_dc_hostname: "{{ ansible_hostname }}"
   # ad_dns_domain_name: "{{ pri_domain_name }}"
