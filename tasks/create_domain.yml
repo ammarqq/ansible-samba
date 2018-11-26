@@ -1,7 +1,8 @@
 ---
 - name: create_domain | configuring samba
+  become_user: root
   template:
-    src: etc/krb5.conf.j2
+    src: etc/samba/krb5.conf.j2
     dest: /etc/krb5.conf
     owner: root
     roup: root
