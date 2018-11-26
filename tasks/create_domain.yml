@@ -12,10 +12,6 @@
     - restart smbd
     - restart samba-ad-dc
 
-- name: create_domain | checking if domain created
-  stat:
-    path: /var/log/.samba_ad_created
-  register: samba_ad_created_check
 
 - name: create_domain | configuring Active Directory
   shell: "samba-tool domain provision --server-role=dc --realm=PROGRESSOFT.CLOUD --dns-backend=SAMBA_INTERNAL --domain=PROGRESSOFT --adminpass=PSCloud@123  --use-rfc2307"
