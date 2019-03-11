@@ -1,0 +1,20 @@
+Vulnerabilities
++----------------------+----------------------+----------------------+----------------------+----------------------+
+| LOCATION             | CATEGORY             | VULNERABILITY        | DESCRIPTION          | EVIDENCE             |
++----------------------+----------------------+----------------------+----------------------+----------------------+
+| k8s.progressoft.clou | Remote Code          | Access to server API |  Accessing the       | {"kind":"APIVersions |
+| d:6443               | Execution            |                      | server API within a  | ","versions":["v1"], |
+|                      |                      |                      | compromised pod      | ...                  |
+|                      |                      |                      | would help an        |                      |
+|                      |                      |                      | attacker gain full   |                      |
+|                      |                      |                      | control over the     |                      |
+|                      |                      |                      | cluster              |                      |
++----------------------+----------------------+----------------------+----------------------+----------------------+
+| k8s.progressoft.clou | Denial of Service    | Denial of Service to | Node not patched for | {                    |
+| d:6443               |                      | Kubernetes API       | CVE-2019-1002100.    |   "major": "1",      |
+|                      |                      | Server               | Depending on your    |   "minor": "12",     |
+|                      |                      |                      | RBAC settings, a     |   "gi...             |
+|                      |                      |                      | crafted json-patch   |                      |
+|                      |                      |                      | could cause a Denial |                      |
+|                      |                      |                      | of Service.          |                      |
++----------------------+----------------------+----------------------+----------------------+----------------------+
